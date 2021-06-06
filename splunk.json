@@ -1,0 +1,107 @@
+{
+   "name": "splunk",
+   "author": "z1p",
+   "version": 0.1,
+   "categories": [],
+   "description": "",
+   "icon": null,
+   "requirements": {
+      "jimi_min_version": null,
+      "jimi_max_version": null,
+      "plugins": []
+   },
+   "collections": {},
+   "triggers": {
+      "splunkSearch": {
+         "display_name": "splunkSearch",
+         "className": "_splunkSearch",
+         "class_location": "models.trigger",
+         "description": "",
+         "fields": [
+            {
+               "schema_item": "splunkJob",
+               "schema_value": "splunkJob",
+               "type": "input",
+               "label": "splunkJob",
+               "description": ""
+            },
+            {
+               "schema_item": "splunkHost",
+               "schema_value": "splunkHost",
+               "type": "input",
+               "label": "splunkHost",
+               "description": ""
+            },
+            {
+               "schema_item": "splunkPort",
+               "schema_value": "splunkPort",
+               "type": "input",
+               "label": "splunkPort",
+               "description": ""
+            },
+            {
+               "schema_item": "splunkUsername",
+               "schema_value": "splunkUsername",
+               "type": "input",
+               "label": "splunkUsername",
+               "description": ""
+            },
+            {
+               "schema_item": "splunkPassword",
+               "schema_value": "splunkPassword",
+               "type": "input",
+               "label": "splunkPassword",
+               "description": ""
+            },
+            {
+               "schema_item": "insecure",
+               "schema_value": "insecure",
+               "type": "checkbox",
+               "label": "insecure",
+               "description": ""
+            },
+            {
+               "schema_item": "searchQuery",
+               "schema_value": "searchQuery",
+               "type": "input",
+               "label": "searchQuery",
+               "description": ""
+            },
+            {
+               "schema_item": "ca",
+               "schema_value": "ca",
+               "type": "input",
+               "label": "ca",
+               "description": ""
+            }
+         ],
+         "data_out": {
+            "result": {
+               "description": "Returns True when successful.",
+               "type": "boolean",
+               "always_present": true,
+               "values": {
+                  "True": {
+                     "description": "Successful."
+                  },
+                  "False": {
+                     "description": "Failure."
+                  }
+               }
+            },
+            "rc": {
+               "description": "Returns the exit code for the action.",
+               "type": "number",
+               "always_present": true,
+               "values": {
+                  "0": {
+                     "description": "Successful."
+                  }
+               }
+            }
+         }
+      }
+   },
+   "actions": {},
+   "settings": {}
+}
